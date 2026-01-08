@@ -2,10 +2,26 @@
 
 :root {
   --dark-blue: #002456;
+  --white : #fff ;
 }
 
+html {
+  scroll-padding-top: 100px;
+  scroll-snap-type: y mandatory;  
+}
 body {
-  background-color: #b4c7d7;
+  background-color: #b4c7d7 ;
+}
+section { 
+  height: 100vh ;
+  scroll-snap-align : start ;
+  scroll-snap-stop: always ;
+  
+} 
+
+@keyframes fadeUp {
+  from { opacity : 1 ; transform: translateY(20px) ; }
+  to   { opacity : 1 ; transform: translateY(0px) ; } 
 }
 header {
   margin-bottom: 120px ;
@@ -15,32 +31,46 @@ nav.navbar {
   background-color: #e9f1f7;
   z-index: 1000;
 }
+.navbar ul.nav {
+  background-color: white;
+}
+.nav-pills .nav-link {
+  border-radius: 999px;
+    margin: 2px 0 ;
+  transition : all 0.7s ease-in-out ;
+}
+
+.nav-link.active-item {
+  background: black;
+  color: #fff;
+  margin: 2px 0 ;
+  border-radius: 999px;
+  transition: all 0.7s ease-in-out;
+}
 
 div#skills{
   margin-bottom: 100px;
 }
 
+
 .navbar-brand,
-.call-me {
+.call-me, .contact-work {
   border-radius: 50px;
-  width: 200px;
+  width: auto ;
+  padding: 2px 15px ;
   background-color: var(--dark-blue);
   font-family: "Kaushan Script", cursive;
   font-weight: 800;
   font-style: normal;
+  font-size: 1.4rem;
   color: white;
   filter: blur(5);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-.call-me {
-  width: 80px;
-  font-size: 1.2rem;
-  height: 40px;
-  line-height: 40px;
-  filter: blur(5);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+span.navbar-brand:hover {
+  color: white ;
 }
+
 
 ul.nav {
   border-radius: 80px;
@@ -62,18 +92,8 @@ a.nav-link {
   width: 100%;
   height: 100%;
 }
-.nav-item .nav-link.courant {
-  color: white;
-  border-radius: 80px;
-  height: 32px;
-  width: 100px;
-  line-height: 30px;
-  background-color: black;
-  padding: 0 20px;
-  text-align: center;
-}
 
-img {
+img#ma-photo {
   height: 500px;
   width: 380px;
   margin-left: 15%;
@@ -83,59 +103,56 @@ img {
 }
 
 div.bloc_me {
+  background-color: var(--white);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
+  height: 150px;
 }
 
 .inclinee {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
-  width: 200px;
+  width: 250px;
+  height: 150px ;
 }
 
 .inclinee.un {
-  width: 200px;
-  height: 200px;
-  top: 150px;
-  background-color: lightblue;
-  margin: 50px auto;
-  transform: rotate(0deg); /* état initial */
-  transition: transform 1s ease; /* animation sur 1 seconde */
+  transform: rotate(-20deg);
 }
 
-.inclinee.un {
-  transform: rotate(-20deg); /* rotation vers le haut */
-}
 
 .inclinee.deux {
-  right: 45%;
-  top: 270px;
-  background-color: aqua;
-  transform: rotate(20deg); /* état initial */
-  transition: transform 2s ease; /* animation sur 1 seconde */
+  transform: rotate(20deg); 
 }
-.deux {
-  transform: rotate(20deg); /* rotation vers le haut */
-}
+
 
 .icone {
   width: 50px;
   height: 50px;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
 }
 .icone.deux {
-  right: 45%;
-  top: 190px;
-  background-color: rgb(6, 27, 27);
-  transform: rotate(20deg); /* état initial */
+  top: 350px;
+  left: -80px;
+  transform: rotate(20deg); 
 }
 .icone.un {
-  left: 250px;
-  top: 350px;
-  background-color: rgb(144, 148, 148);
-  transform: rotate(20deg); /* état initial */
+  top: 180px ;
+  left: 65% ;
+  transform: rotate(20deg);
 }
 
+.contact-work a {
+  color: white;
+  text-decoration: none ;
+}
+.contact-work {
+  height: 50px ;
+  line-height: 50px ;
+  box-shadow : 0 5px 15px rgba(0.,0,0,0.5) ;
+}
+.contact-work:hover {
+ transition: all 1s ;
+}
 .section {
   background-color: var(--dark-blue);
   white-space: nowrap;
@@ -160,6 +177,9 @@ div.bloc_me {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+.scroll-container.projects-scroll {
+  padding-top: 0;
+}
 
 /* Personnalisation de la barre de défilement pour Chrome/Edge/Safari */
 .scroll-container::-webkit-scrollbar {
@@ -172,17 +192,15 @@ div.bloc_me {
 
 .scroll-card {
   flex: 0 0 calc(30.333% - 20px); /* 3 cartes par vue */
+  white-space: wrap;
   min-width: 250px;
   height: 180px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 220px ;
 }
 
-/* 4. Optionnel : Pause au survol pour laisser l'utilisateur lire */
-.scroll-container:hover .scroll-card {
-  animation-play-state: paused;
-}
 
 /* Style du fond bleu de votre image */
 .bg-custom-blue {
@@ -204,6 +222,11 @@ div.bloc_me {
   z-index: 2; /* Pour passer au-dessus des cartes */
   pointer-events: none; /* Permet de cliquer à travers le flou */
 }
+.bg-custom-blue.no-filter::before,
+.bg-custom-blue.no-filter::after {
+display: none !important;
+}
+
 
 /* Masque de Gauche (dégradé du bleu vers le transparent) */
 .bg-custom-blue::before {
@@ -224,32 +247,14 @@ div.bloc_me {
     rgba(233, 241, 247, 0.3) 100%
   );
 }
-
-/* Les petits carrés blancs arrondis */
-.cat,
-.club {
-  background-color: white;
-  aspect-ratio: 1 / 1; /* Force un carré parfait */
-  border-radius: 18px;
-  width: 350px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s;
-  cursor: pointer;
-}
-
-.cat:hover,
-.club:hover {
-  transform: translateY(-5px);
-}
-
-.soft {
-  height: 80px;
-  line-height: 80px;
+ /* Icones sur About Me */
+ .emoji-icon {
+  font-size: 2.5rem;      /* try 2.5rem – 4rem */
   text-align: center;
-  background-color: white;
-  border-radius: 20px;
+  line-height: 1;
 }
-/* CONTENEUR GLOBAL */
+
+
 .skills-wrapper {
   position: relative;
   min-height: 420px;
@@ -271,29 +276,133 @@ div.bloc_me {
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
-
-/* NAV MODERNE */
-.nav-pills .nav-link {
-  transition: all 0.3s ease;
-  border-radius: 999px;
+ul.nav.skills {
+  height: 40px ;
+}
+ul.nav.skills a.skills-link {
+  color: black ;
+  text-decoration: none ;
+  
 }
 
-.nav-pills .nav-link.active {
-  background: black;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+ul.nav.skills a.skills-link.active  {
   color: white;
 }
-.nav-link.active-section {
-  background-color: #0d6efd; /* choisis ta couleur */
-  color: #fff;
-  border-radius: 50px;
-  transition: background-color 0.3s ease;
+ul.nav.skills li {
+  background-color: white ;
+  color: white ;
+  width: auto ;
+  height: 35px ;
+  line-height: 35px ;
+  border-radius: 40px ;
+  padding: 0 10px ;
+  transition: background-color 0.7s ease-in-out;
 }
+ul.nav.skills li.active{
+  color: white ;
+  
+  background-color: black;
+  
+  transition: background-color 0.7s ease-in-out;
+  }
+
+  .realisation img {
+    width: 100% ;
+    height: 100%;
+  }
+
+/* Les petits carrés blancs arrondis */
+.cat,
+.club {
+  background-color: white;
+  border-radius: 18px;
+  width: 350px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  cursor: pointer;
+  font-size: 0.9rem ;
+}
+.cat{
+  width: 300px ;
+}
+.cat:hover,
+.club:hover {
+  transform: translateY(-5px);
+}
+
+.soft {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.4) ;
+  transition: all 0.3s ease ;
+}
+.soft:hover {
+  transform: translateY(-3px) ;
+}
+/* Section base */
+.process-section {
+  background: #f8f9fa;
+}
+
+/* Horizontal line */
+.process-row::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  right: 8%;
+  height: 3px;
+  background: linear-gradient(to right, #dee2e6, #04478b);
+  z-index: 1;
+}
+
+/* Cards */
+.process-card {
+  background: #fff;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 230px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
+  height: 100px ;
+  /* Animation initial state */
+  opacity: 1;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+/* Reveal */
+.process-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered effect */
+.step:nth-child(1) .process-card { transition-delay: 0.2s; }
+.step:nth-child(2) .process-card { transition-delay: 0.5s; }
+.step:nth-child(3) .process-card { transition-delay: 0.8s; }
+
+/* Responsive fallback (vertical stack) */
+
+
 
 .club {
-  width: 260px;
+  width: 380px;
+  max-height: auto;
+  aspect-ratio: none ;
 }
-
+div.poste{
+  height: 50px;
+}
+div.poste-desc {
+  font-size: 0.95rem;
+}
 .glass-card {
   background: white;
   backdrop-filter: blur(10px);
@@ -372,6 +481,11 @@ h1#GIT {
     width: 16ch;
   }
 }
+
+.icone.icon-contact{
+  inset: 0;
+  left: 45%;
+}
 div#contact_icone {
   padding-left: 12%;
   padding-right: 20%;
@@ -392,4 +506,40 @@ a.logo_contact {
   font-size: 2rem;
   font-weight: bolder;
   color: #0a6dc4;
+}
+
+.tool-icon img {
+  width: 64px ; /* Icon size */
+  height: 64px;
+  background-color: transparent;
+  box-shadow: none;
+  object-fit: contain;
+  border-radius: 8px ; 
+}
+
+.tool-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+img.logo-club {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Project section */
+.scroll-card a {
+  color: white;
+  text-decoration: none ;
+}
+.button {
+  height:30px ; 
+  line-height: 30px ;
+  background-color: var(--dark-blue) ;
+  border-radius: 20px ;
+  color: white ;
+  text-align: center ;
+}
+.gh-button {
+  background-color: black;
 }

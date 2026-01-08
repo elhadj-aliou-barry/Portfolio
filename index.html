@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Devicon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
 
 </head>
 <body style="background-color: #E9F1F7;">
@@ -15,7 +18,7 @@
     <header>
         <nav class="navbar pt-3 fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-center" href="#">Barry Elhadj Aliou</a>
+            <span class="navbar-brand text-center">Barry Elhadj Aliou</span>
             <ul class="nav w-50 ps-2 justify-content-around nav-pills">
                 <li class="nav-item">
                     <a class="nav-link " href="#home">Home</a>
@@ -27,13 +30,13 @@
                     <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#insertion">Insertion</a>
+                    <a class="nav-link" href="#insertion">Insertion & Projets</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
-            <div class=" call-me  col-1 justify-content-end me-0 text-center rounded-8">Call me</div>
+            <div class=" call-me  col-1 justify-content-end me-0 text-center rounded-8">Prêt à collaborer</div>
             <button class="navbar-toggler d-sm-none d-md-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,16 +48,16 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About me</a>
+                            <a class="nav-link" href="#about">About me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Skills</a>
+                            <a class="nav-link" href="#skills">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Insertion</a>
+                            <a class="nav-link" href="#insertion">Insertion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>   
                     </ul>
                     <form class="d-flex mt-3" role="search">
@@ -67,93 +70,252 @@
         </nav>
     </header>
     <!-- Section Home -->
-    <section>
-         <div class="container justify-content-around position-relative  mb-5 " id="home">
-            <div class="row m-5">
+    <section id="home" >
+         <div class="container    mt-3 pt-1 " >
+            <div class="row m-5 justify-content-between position-relative ">
                 <div class="col-7 ">
-                    <div class=" bloc_me col-12 h-25 mx-5 my-3 mb-5">
+                    <div class=" bloc_me col-12  mx-5 my-3 mb-5 text-center p-2 ">
+                        <h1 id="Iam">Hey, je suis <span style="font-style: italic;">Elhadj Aliou Barry</span></h1>
+                        <h3 id="dev" style="font-weight: 200;">Etudiant en Informatique et passionné par le dévéloppement web et le software engineering</h3>
+                    </div>
+                    <div class="row mt-5 g-3 justify-content-around">
 
+                        <div class="col-3 inclinee un   mx-5  rounded-3 " style="background-image: url(portfolio_screenshot.png); background-repeat: no-repeat; background-size: cover;">
+                          
+                        </div>
+                        <div class=" col-3 inclinee deux   ms-5  rounded-3 "style="background-image: url(image-portfolio.png); background-repeat: no-repeat; background-size: cover;">
+                        
+                        </div>
+                    </div>
+                     <div class=" icone un col-1 position-absolute  rounded-3  icone "><div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-github-plain colored" style="font-size: 3.3rem;"></i>
+                          </div></div>
+                     
+                     <div class="  icone deux col-1 position-absolute  rounded-3  " style="background-color: #E9F1F7;"><div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-linux-plain colored" style="font-size: 3.3rem;"></i>
+                          </div>
                         
                     </div>
-                    <div class="inclinee un col-3 position-absolute border rounded-3 h-25">
 
-                    </div>
-                     <div class=" icone un col-1 position-absolute border rounded-3  icone ">
-                        
-                    </div>
-                     <div class=" inclinee deux col-3 position-absolute border rounded-3 h-25">
-                        
-                    </div>
-                     <div class="  icone deux col-1 position-absolute border rounded-3 icone ">
-                        
-                    </div>
-
+                <div class="row m-5  ps-5 justify-content-center g-4">
+                    <div class="contact-work col-3 me-4" style="background-color: rgb(224, 61, 2);"><a href="">Envoyer un message</a></div>
+                    <div class="contact-work col-3 me-0" style="margin-left: 40px ; background-color: black;"><a href="">Voir mes réalisations</a></div>
+                </div>
                 </div>
                 <div class="col-4  ms-5  ">
-                    <img  src="ma_photo.jpeg" alt="ma photo">
+                    <img  id = "ma-photo"src="ma_photo.jpeg" alt="ma photo">
                 </div>
             </div>
          </div>
     </section>
 
     <!--Section About me-->
-
-     <div class="container m-5 p-5 position-relative" id="about">
-        <div class="row justify-content-center mt-5">
-            <div class=" section col-1  text-center mb-3">About me</div>
-        </div>
+<section id="about">
+     <div class="container m-5 position-relative" >
 
         <div class="bg-custom-blue">
-            <div class="scroll-container">
-                
-                <div class="scroll-card"></div>
-                
-                <div class="scroll-card"></div>
-                
-                <div class="scroll-card"></div>
+           <div class="scroll-container">
 
-                <div class="scroll-card "></div>
-                
-                <div class="scroll-card"></div>
-                
-            </div>
-            <div class="scroll-container">
-                
-                <div class="scroll-card "></div>
-                
-                <div class="scroll-card"></div>
-                
-                <div class="scroll-card"></div>
-
-                <div class="scroll-card "></div>
-                
-                <div class="scroll-card"></div>
-                
-            </div>
-        </div>
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Passion pour la lecture
+      </div>
+      <div class="col-2  "><span class="emoji-icon">📚</span></div>
     </div>
+    J’apprécie particulièrement les romans philosophiques et les récits qui explorent la condition humaine.
+    Parmi mes auteurs favoris figurent Albert Camus, Dostoïevski et Franz Kafka.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2 ms-4 "><span class="emoji-icon">📖</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Passion pour la lecture
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Curiosité & Enthousiasme
+      </div>
+      <div class="col-2 "><span class="emoji-icon">💡</span></div>
+    </div>
+    Curieux et passionné par la technologie, j’explore continuellement de nouveaux langages, frameworks et outils.
+    Je m’intéresse particulièrement aux solutions qui optimisent l’efficacité et les méthodes de travail.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2 ms-4 "><span class="emoji-icon">🚀</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Toujours curieux et motivé !
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Collaboration & ouverture
+      </div> 
+      <div class="col-2 "><span class="emoji-icon">👥</span> </div>
+    </div>
+    J’aime collaborer en équipe, en particulier avec des personnes de différents horizons.
+    Travailler avec des profils variés me permet d’apprendre de nouvelles perspectives et méthodes de travail.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2 ms-4 "><span class="emoji-icon">🌐</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Explorer, apprendre, créer !
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Design & Créativité
+      </div>
+      <div class="col-2 "><span class="emoji-icon">🎨</span></div>
+    </div>
+    En parallèle du développement web et du software engineering, je m’intéresse au design graphique et à la conception d’interfaces UI/UX.
+    J’utilise des outils comme Figma pour créer des maquettes et des prototypes.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2 ms-4 "><span class="emoji-icon">🖥️</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Design & Créativité
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Sport & équilibre personnel
+      </div>
+      <div class="col-2 "><span class="emoji-icon">🧘</span></div>
+    </div>
+    Pendant mon temps libre, je pratique la gymnastique et la course à pied.
+    Ces activités me permettent de prendre du recul et de maintenir un équilibre entre effort physique et concentration mentale.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2 ms-4 "><span class="emoji-icon">🏃</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Sport & équilibre personnel
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+            <!--Second espace de scroll --> 
+            <div class="scroll-container">
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Curiosité & Enthousiasme
+      </div>
+      <div class="col-2 border rounded"><span class="emoji-icon">🚀</span></div>
+    </div>
+    Curieux et passionné par la technologie, j’explore continuellement de nouveaux langages, frameworks et outils.
+    Je m’intéresse particulièrement aux solutions qui optimisent l’efficacité et les méthodes de travail.
+    <div class="row align-items-center">
+      <div class="col-2 border rounded"><span class="emoji-icon">💡</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Toujours curieux et motivé !
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Passion pour la lecture
+      </div>
+      <div class="col-2  "><span class="emoji-icon">📖</span></div>
+    </div>
+    J’apprécie particulièrement les romans philosophiques et les récits qui explorent la condition humaine.
+    Parmi mes auteurs favoris figurent Albert Camus, Dostoïevski et Franz Kafka.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2  ms-4 "><span class="emoji-icon">📚</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Passion pour la lecture
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Design & Créativité
+      </div>
+      <div class="col-2 border rounded"><span class="emoji-icon">🖥️</span></div>
+    </div>
+    En parallèle du développement web et du software engineering, je m’intéresse au design graphique et à la conception d’interfaces UI/UX.
+    J’utilise des outils comme Figma pour créer des maquettes et des prototypes.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2 ms-4"><span class="emoji-icon">🎨</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Design & Créativité
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Sport & équilibre personnel
+      </div>
+      <div class="col-2"><span class="emoji-icon">🏃</span></div>
+    </div>
+    Pendant mon temps libre, je pratique la gymnastique et la course à pied.
+    Ces activités me permettent de prendre du recul et de maintenir un équilibre entre effort physique et concentration mentale.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2 ms-4"><span class="emoji-icon">🧘</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Sport & équilibre personnel
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-card">
+    <div class="row align-items-center">
+      <div class="col-8 text-center m-2 p-2">
+        Collaboration & ouverture
+      </div>
+      <div class="col-2 "><span class="emoji-icon">🌐</span></div>
+    </div>
+    J’aime collaborer en équipe, en particulier avec des personnes de différents horizons.
+    Travailler avec des profils variés me permet d’apprendre de nouvelles perspectives et méthodes de travail.
+    <div class="row align-items-center justify-content-between">
+      <div class="col-2 ms-4"><span class="emoji-icon">👥</span></div>
+      <div class="col-8 text-center m-2 p-2">
+        Explorer, apprendre, créer !
+      </div>
+    </div>
+  </div>
+
+</div>
+
+    </div>
+</section>
 
     <!--Section Skills-->
-<div class="container justify-content-center " id="skills">
-
-         <div class="row justify-content-center m-5 mb-0">
-            <div class=" section col-1  text-center" >Skills</div>
-        </div>
-        <nav class="navbar m-2" style="z-index: 10;">
-            <div class="container-fluid justify-content-center">
-                <ul class="nav w-50 ps-2 justify-content-around nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link  active " href="#" data-target="Technical" style="white-space: nowrap; background-color: none;">
+<section id="skills">
+<div class="container justify-content-center " >
+        <!--Navigation bar -->
+        <nav class="navbar m-2" style="z-index: 10; ">
+            <div class="container-fluid justify-content-center" >
+                <ul class="nav  skills w-50 ps-2 justify-content-around nav-pills" style="height: 40px;">
+                <li class="nav-item active">
+                    <a class="skills-link active" href="" data-target="Technical">
                     Technical Skills
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-target="soft_skills">
+                    <a class="skills-link" href="" data-target="soft_skills">
                     Soft Skills
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-target="Tools">
+                    <a class="skills-link" href="" data-target="Tools">
                     Tools & Environements
                     </a>
                 </li>
@@ -166,33 +328,37 @@
             <div class="Technical skills-panel active row gx-1 mt-4 justify-content-center ps-5">
                 <div class="col"><div class="cat">
                     <div class="col text-center m-2 p-2">Front-end</div>
-                    <div class="col p-2">Capacité à créer des sites webs allant de site vitrines à de sites intéractif et animés, incluant des transitions, des animations aux keysframes.
-                        Et également incluant un design responsive.
+                    <div class="col p-2">Capacité à concevoir des sites web allant du site vitrine aux sites web interactives et animées,
+                       intégrant des transitions fluides, des animations basées sur les keyframes et un design entièrement responsive.
                     </div>
-                    <div class="row m-2">
-                        <div class="col-3 p-2 m-2 border rounded-2"></div>
-                        <div class="col-3 p-2 m-2 border rounded-2"></div>
-                        <div class="col-3 p-2 m-2 border rounded-2"></div>
+                    <div class="row m-2 justify-content-center">
+                        <div class="col-10 p-2 m-2  rounded-2 realisation "><img src="portfolio_screenshot.png" alt="Image d'une partie du portfolio"></div>  
                     </div>
                 </div></div>
                 <div class="col"><div class="cat">
                     <div class="col text-center m-2 p-2">Back-end</div>
-                    <div class="col p-2">Gestion de bases de données, et de sites Webs utilisant ou fournissant des informations extraites d'une Base de données, ou d'une API en ligne.
-                        Compréhension profonde des bases de données rélationnelles, des réquêtes SQL et des processus d'acheminement sur interface utilisateur.
-                    </div>
-                    <div class="row m-2">
-                        <div class="col-4 p-2 m-2 border rounded-2"></div>
-                        <div class="col-4 p-2 m-2 border rounded-2"></div>
+                    <div class="col p-2" style="font-size: 0.85rem ;">Conception et gestion de bases de données relationnelles, et développement de sites web dynamiques exploitant des données structurées.
+                       Maîtrise solide du SQL et des mécanismes de traitement et d’affichage des données jusqu’à l’interface utilisateur</div>
+                    <div class="row m-2 justify-content-center">
+                        <div class="col-10 p-2 m-2  rounded-2 realisation"><img src="Schema_EventHub.png" alt="Schema Base de données"></div>  
                     </div>
                 </div></div>
                 <div class="col"><div class="cat">
                     <div class="col text-center m-2 p-2">Versionnage</div>
-                    <div class="col p-2">Gestion de versions de projets en local ou en ligne; capacité à collaborer et travailler avec plusieurs personnes tout en gardant un contrôle sur le code
-                        et les modifications apportés par un membre.
+                    <div class="col p-2">Gestion du versioning de projets en local et en ligne, avec une forte capacité à collaborer au sein d’une équipe tout en assurant le suivi,
+                       le contrôle et la traçabilité des modifications apportées au code.
                     </div>
-                    <div class="row m-2">
-                        <div class="col-4 p-2 m-2 border rounded-2"></div>
-                        <div class="col-4 p-2 m-2 border rounded-2"></div>
+                    <div class="row m-2 justify-content-center">
+                        <div class="col-10 p-2 m-2  rounded-2 realisation"><img src="github-dashB.png" alt="Tableau de bord github"></div>  
+                    </div>
+                </div></div>
+                <div class="col"><div class="cat">
+                    <div class="col text-center m-2 p-2">Debbuguage</div>
+                    <div class="col p-2" style="font-size: 0.85rem;">Capacité à diagnostiquer, analyser et corriger des dysfonctionnements côté front-end et back-end, en identifiant efficacement les erreurs de logique,
+                       de structure ou de rendu dans des environnements HTML, CSS, JavaScript et PHP
+                    </div>
+                    <div class="row m-2 justify-content-center">
+                        <div class="col-10 p-2 m-2  rounded-2 realisation"><img src="devtools.png" alt="Outils de Debbuguage"></div>  
                     </div>
                 </div></div>
             </div>
@@ -201,14 +367,20 @@
             <div class="row mt-4 gx-1 justify-content-around">
                 <div class="col-2 soft border">Communication</div>
                 <div class="col-2 soft border">Travail en équipe</div>
-                <div class="col-2 soft border">Résolution de problèmes</div>
-                <div class="col-2 soft border">Optimisation de travail</div>
+                <div class="col-2 soft border">Coordination d'équipe</div>
+                <div class="col-2 soft border" style="white-space: wrap; font-size: 0.91rem;">Planification et Organisation</div>
             </div>
             <div class="row mt-4 gx-1 justify-content-around">
-                <div class="col-2 soft border">Adaptation</div>
-                <div class="col-2 soft border">Créativité</div>
-                <div class="col-2 soft border">Gestion efficace de temps</div>
-                <div class="col-2 soft border">Management</div>
+                <div class="col-2 soft border">Gestion éfficace de temps</div>
+                <div class="col-2 soft border">Créativité et Innovation</div>
+                <div class="col-2 soft border">Esprit critique</div>
+                <div class="col-2 soft border">Résolution de problèmes</div>
+            </div>
+            <div class="row mt-4 gx-1 justify-content-around">
+                <div class="col-2 soft border">Adaptabilité</div>
+                <div class="col-2 soft border">Autonomie</div>
+                <div class="col-2 soft border">Curiosité et autoformation</div>
+                <div class="col-2 soft border">Optimisation de travail</div>
             </div>
         </div>
        
@@ -218,104 +390,354 @@
                 <div class="col">
                     <div class="cat">
                         <div class="col text-center m-2 p-2">Langage de programmation</div>
-                        <div class="row m-2">
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
-                            <div class="col-3 p-2 m-2 border rounded-2"></div>
+                        <!-- Devicon CSS -->
+                        <div class="row justify-content-center text-center">
+                          <!-- HTML5 -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-html5-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- CSS3 -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-css3-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- PHP -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-php-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- JavaScript -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- MySQL -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- Bootstrap -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-bootstrap-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- React -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-react-original colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- C -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-c-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- C++ -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-cplusplus-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- Python -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-python-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- Shell -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-powershell-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+                          <!-- Git -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-git-plain colored" style="font-size: 3rem;"></i>
+                          </div>
+
                         </div>
-                    </div>
-                </div>
+                      </div>
+
+                      </div>                                        
                 <!--Outils bureautiques-->
                 <div class="col">
-                    <div class="cat">
-                        <div class="col text-center m-2 p-2">Outils bureautiques</div>
-                        <div class="row m-2">
-                            <div class="col-4 p-2 m-2 border rounded-2"></div>
-                            <div class="col-4 p-2 m-2 border rounded-2"></div>
-                            <div class="col-4 p-2 m-2 border rounded-2"></div>
-                            <div class="col-4 p-2 m-2 border rounded-2"></div>
-                        </div>
+                    <div class="cat pb-5 ">
+                        <div class="col text-center m-2 mb-3 p-2">Outils bureautiques</div>                      
+                          <div class="row g-4 justify-content-center">
+
+                            <div class="col-6 col-md-4 text-center">
+                              <div class="tool-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg/250px-Microsoft_Office_Word_%282025%E2%80%93present%29.svg.png" alt="Word">
+                              </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 text-center">
+                              <div class="tool-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel">
+                              </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 text-center">
+                              <div class="tool-icon">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf52hDyyPs-hW7OMO2HMvyczGIY2Dy2Ova-A&s" alt="PowerPoint">
+                              </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 text-center">
+                              <div class="tool-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+                              </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 text-center">
+                              <div class="tool-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/he/5/56/Canva-logo.png" alt="Canva">
+                              </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 text-center">
+                              <div class="tool-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Google_Docs_Editors_logo.png" alt="Google workspaces">
+                              </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 text-center">
+                              <div class="tool-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1200px-Notion-logo.svg.png" alt="Notion">
+                              </div>
+                            </div>
+
+                          </div>
+
                     </div>
                 </div>
+    
                 <!--Enviroements de developpeur-->
                 <div class="col">
                     <div class="cat">
-                        <div class="col text-center m-2 p-2">Enviroments de developpeur</div>
-                        <div class="row m-2">
-                            <div class="col-4 p-2 m-2 border rounded-2"></div>
-                            <div class="col-4 p-2 m-2 border rounded-2"></div>
-                            <div class="col-4 p-2 m-2 border rounded-2"></div>
-                            <div class="col-4 p-2 m-2 border rounded-2"></div>
+                        <div class="col text-center m-2 p-2">Outils et Environements de Développement</div>
+                        <!-- Devicon CSS -->
+                        <div class="row justify-content-center text-center">
+                          <!-- HTML5 -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-vscode-plain colored" style="font-size: 3.3rem;"></i>
+                          </div>
+                          <!-- CSS3 -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-powershell-plain colored" style="font-size: 3.3rem;"></i>
+                          </div>
+                          <!-- PHP -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-github-plain colored" style="font-size: 3.3rem;"></i>
+                          </div>
+                          <!-- JavaScript -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAx6camOf_G96Zcs2Zj34Yjmy0ysPd-p0oJQ&s" alt="linux">
+                          </div>
+                          <!-- MySQL -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-windows11-plain colored" style="font-size: 3.3rem;"></i>
+                          </div>
+                          <!-- Bootstrap -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <i class="devicon-phpstorm-plain colored" style="font-size: 3.3rem;"></i>
+                          </div>
+                          <!-- React -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/PhpMyAdmin_logo.svg/1200px-PhpMyAdmin_logo.svg.png" alt="PhpMyAdmin_logo">
+                          </div>
+                          <!-- C -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/78/XAMPP_logo.svg/1183px-XAMPP_logo.svg.png" alt="Xampp Logo">
+                          </div>
+                          <!--Chrome dev tools -->
+                          <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon">
+                            <img src="https://pbs.twimg.com/profile_images/762579160099385344/w5MfsnMn_400x400.jpg" alt="chrome-devtools Logo">
+                          </div>
+                         
                         </div>
+                      </div>
+
+                      </div>           
+             </div>
+</div>
+</div>
+  <div class="container">
+    <div class="row position-relative process-row justify-content-center">
+
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <div class="process-card step" style="max-width: 180px ;">
+          <h5>De l'Idée au design</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="process-card step">
+          <h5>Du Design à la Conception</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex justify-content-center">
+        <div class="process-card step">
+          <h5>De la Conception au produit final</h5>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!--Section Projects & Social Insertion -->
+<section id="insertion">
+  <!--Insertion Sociale-->
+    <div class="container mb-2">
+  
+        <div class="row mt-4 justify-content-around gx-1 " >
+                <div class="col-1 p-2 club text-center">
+                    <div class="row my-2">
+                      <div class="col-7 text-center m-2 p-2" style="font-size:1.2rem ;">Epik Leaders</div>
+                      <div class="col-2"><img class="logo-club" src ="epikleaders-logo.png" alt=""></div>
+                    </div>
+                    <div class="col my-3 text-center fs-6 poste">Vice Président Evenementiel <br>Responsable du département événementiel </div>
+                    <div class="col  fw-normal poste-desc">
+                      Responsable de la coordination d'une équipe de quatres personnes et de  différents département du club, et chargé à l’organisation des événements du club,
+                       impliquant  la planification et la mise en œuvre d’activités comme des journées d'ouvertures, d'acceuil des membres, et de conférences scientifiques.
+                    </div>
+              </div>
+                
+                <div class="col-1 club px-2 text-center">
+                    <div class="row my-2">
+                      <div class="col-7 text-center m-2 p-2" style="font-size:1.2rem ;">UEI-FST</div>
+                      <div class="col-2"><img class="logo-club" src ="UEI-logo.png" alt=""></div>
+                    </div>
+                    <div class="col my-3 text-center fs-6 poste">Chargé des affaires sociales de l'UEI-Union des Etudiants Internationaux</div>
+                    <div class="col  fw-normal poste-desc">Chargé de faciliter l’intégration sociale et culturelle des étudiants étrangers de la FST.
+                      Participation à l’organisation et à la coordination d’événements d’accueil et d’intégration, de journées culturelles, ainsi qu’à l’accompagnement et au soutien des nouveaux arrivants
+                       dans leurs processsus d'adaptation et d'intégration universitaire et sociale.
                     </div>
                 </div>
-    </div>
-</div>
-</div>
-</div>
-
-    <!--Section Projects & Social Insertion -->
-    <div class="container  p-5 position-relative" id="insertion">
-        <div class="row justify-content-center mt-5">
-            <div class=" section col-1  text-center mb-1">Projects and realisations</div>
+                <div class="col-1 club px-2 text-center">
+                  <div class="row my-2">
+                    <div class="col-7 text-center m-2 p-2" style="font-size:1.2rem ;">Aseguim-Fès</div>
+                    <div class="col-2"><img class="logo-club" src ="aseguim-logo.png" alt=""></div>
+                  </div>
+                  <div class="col my-3 fs-6 text-center poste " >Président de la commission sociale et chargé à l'organisation de la commission Scientifique</div>
+                    <div class="col  fw-normal poste-desc">Responsable de la coordination des actions sociales de la communauté, impliqué dans l’organisation d’activités d’intégration et d’événements culturels, 
+                      ainsi que dans la planification d’initiatives scientifiques et académiques, notamment l’accueil des nouveaux arrivants et l’organisation de journées académiques et de formations scientifiques.
+                    </div>
+                </div>
+                </div>
+              
+        </div>   
+    <div class="container  position-relative" >
+        <div class="row justify-content-center ">
+            <div class=" section col-1  text-center ">Projets et Réalisations</div>
         </div>
         <!-- scroll divs-->
-        <div class="bg-custom-blue">
-            <div class="scroll-container">
-                
-                <div class="scroll-card"></div>
-                
-                <div class="scroll-card"></div>
-                
-                <div class="scroll-card"></div>
-
-                <div class="scroll-card "></div>
-                
-                <div class="scroll-card"></div>
-                
-            </div>
-        </div>
-    </div>
-    <!--Insertion Sociale-->
-    <div class="container mb-5">
-        <div class="row justify-content-center " id="insertion">
-            <div class=" section col-1  text-center mb-1">Insertion Sociale</div>
-        </div>
-        <div class="row mt-4 justify-content-around gx-1 " >
-            <div class="col-1 club">
-                <div class="col text-center m-2 p-2">Asseguim-Fès</div>
-            </div>
-                <div class="col-1 club">
-                    <div class="col text-center m-2 p-2">UEI-FST</div>
+        <div class="bg-custom-blue no-filter">
+            <div class="scroll-container projects-scroll">
+                <!-- Mini-calculatrice Web -->
+                <div class="scroll-card">
+                  <div class="col p-2 my-1 text-center"> Mini-Calculatrice-Web</div>
+                  <div class="col text-center my-1"><br>Description du projet</div>
+                  <!--Stack utilisée-->
+                  <div class="row justify-content-center my-1">
+                          <div class="col-2 mb-4"><i class="devicon-html5-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-css3-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-php-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i></div>
+                  </div>
+                  <!--visit sur le projet-->
+                    <div class="row justify-content-center my-1"> 
+                      <div class="col-4 button "><a href="" >Voir le projet</a></div>
+                      <div class="col-5 ms-4"><a href="">
+                        <div class="row  justify-content-center button gh-button ">
+                          <div class="col-9 me-0 ">Voir le code</div>
+                          <div class="col-2 px-0"><i class="devicon-github-plain " style="font-size: 1.5rem;"></i></div>
+                        </div></a>
+                      </div>
                     </div>
-                <div class="col-1 club">
-                    <div class="col text-center m-2 p-2">Epik Leaders</div>
-                    
                 </div>
-                <div class="col-1 club">
-                    <div class="col text-center m-2 p-2">Asseguim-Fès</div>
-                    
+               
+                <!-- Mini-calculatrice Web -->
+                <div class="scroll-card">
+                  <div class="col p-2 my-1 text-center"> Mini-Calculatrice-Web</div>
+                  <div class="col text-center my-1"><br>Description du projet</div>
+                  <!--Stack utilisée-->
+                  <div class="row justify-content-center my-1">
+                          <div class="col-2 mb-4"><i class="devicon-html5-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-css3-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-php-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i></div>
+                  </div>
+                  <!--visit sur le projet-->
+                    <div class="row justify-content-center my-1"> 
+                      <div class="col-4 button "><a href="" >Voir le projet</a></div>
+                      <div class="col-5 ms-4"><a href="">
+                        <div class="row  justify-content-center button gh-button ">
+                          <div class="col-9 me-0 ">Voir le code</div>
+                          <div class="col-2 px-0"><i class="devicon-github-plain " style="font-size: 1.5rem;"></i></div>
+                        </div></a>
+                      </div>
+                    </div>
                 </div>
-        </div>   
+
+                <!-- Mini-calculatrice Web -->
+                <div class="scroll-card">
+                  <div class="col p-2 my-1 text-center"> Mini-Calculatrice-Web</div>
+                  <div class="col text-center my-1"><br>Description du projet</div>
+                  <!--Stack utilisée-->
+                  <div class="row justify-content-center my-1">
+                          <div class="col-2 mb-4"><i class="devicon-html5-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-css3-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-php-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i></div>
+                  </div>
+                  <!--visit sur le projet-->
+                    <div class="row justify-content-center my-1"> 
+                      <div class="col-4 button "><a href="" >Voir le projet</a></div>
+                      <div class="col-5 ms-4"><a href="">
+                        <div class="row  justify-content-center button gh-button ">
+                          <div class="col-9 me-0 ">Voir le code</div>
+                          <div class="col-2 px-0"><i class="devicon-github-plain " style="font-size: 1.5rem;"></i></div>
+                        </div></a>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- Mini-calculatrice Web -->
+                <div class="scroll-card">
+                  <div class="col pt-2 my-1 text-center"> Mini-Calculatrice-Web</div>
+                  <div class="col text-center mb-2"><br>Description du projet</div>
+                  <!--Stack utilisée-->
+                  <div class="row justify-content-center my-1">
+                          <div class="col-2 mb-4"><i class="devicon-html5-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-css3-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-php-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i></div>
+                          <div class="col-2 mb-4"><i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i></div>
+                  </div>
+                  <!--visit sur le projet-->
+                    <div class="row justify-content-center my-1"> 
+                      <div class="col-4 button "><a href="" >Voir le projet</a></div>
+                      <div class="col-5 ms-4"><a href="">
+                        <div class="row  justify-content-center button gh-button ">
+                          <div class="col-9 me-0 ">Voir le code</div>
+                          <div class="col-2 px-0"><i class="devicon-github-plain " style="font-size: 1.5rem;"></i></div>
+                        </div></a>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 
-    <!--Prise de contact-->
-    <div class="container m-5 pt-5" id="contact">
-        <div class="row position-relative">
-            <div class="col-7  me-0">
-                <div class="col m-5 ">
+</section>
+
+<!--Prise de contact-->
+<section id="contact">
+    <div class="container mt-5 pt-5 " >
+        <div class="row position-relative text-start">
+            <div class="col-7  text-start ">
+                <div class="col m-5 ms-0 ">
                     <h1 id="GIT">Get In Touch !</h1>
                     <h1 id="let_start">Let's start something together !</h1>
                 </div>
-                <div class="col name">Elhadj Aliou Barry</div>
-                <div class="col mt-2  " style="color:var(--dark-blue) ; font-weight: bolder;">Maroc-Fès, Mt Fleuri-Avenue Beyrouth</div>
-                <div class="  icone deux col-1 position-absolute border rounded-3 icone " style="top: 250px; right: 650px;transform: rotate(-15deg);"></div>
+                <div class="col name ps-5 ms-3">Elhadj Aliou Barry</div>
+                <div class="col mt-2 ps-5 ms-3 " style="color:var(--dark-blue) ; font-weight: bolder;">Maroc-Fès, Mt Fleuri-Avenue Beyrouth</div>
+                <div class="  icone icon-contact col-1 position-absolute border rounded-3 icone " style="top: 250px; right: 650px;transform: rotate(25deg);"><span class="emoji-icon">👨‍💻</span></div>
                 <div id="contact_icone"> 
                     <a id="logo_github" class="logo_contact" href=""><i class="fa-brands fa-github fa-2xl"></i></a>
                     <a id="logo_mail" class="logo_contact" href="mailto:elhadjaliou.barry@usmba.ac.ma"><i class="fa-regular fa-envelope  fa-2xl"></i></a>
@@ -325,7 +747,7 @@
             </div>
 
             <!--Formulaire de contact-->
-            <form class="glass-card">
+            <form class="glass-card ms-4">
                 <h2>Contactez-moi !</h2>
 
                 <div class="row g-3 mb-3">
@@ -346,13 +768,14 @@
 
                 <div class="form-floating mb-4 ">
                     <textarea class="form-control" placeholder="Message" id="message" style="height: 120px ; line-height: 25px;"></textarea>
-                    <label for="message">Votre message</label>
+                    <label for="message">Que voulez-vous me dire ?</label>
                 </div>
 
                 <button type="submit" class="btn btn-modern w-100 text-white">Envoyer le message</button>
             </form>
         </div>
     </div>
+</section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>

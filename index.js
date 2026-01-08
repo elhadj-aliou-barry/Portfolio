@@ -1,51 +1,71 @@
-  const navLinks = document.querySelectorAll('.nav-link');
-  const panels = document.querySelectorAll('.skills-panel');
+// Js intersections observer-section 
+const sections=document.querySelectorAll("section[id]") ;
+const links=document.querySelectorAll(".nav-link") ;
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach( entry => {
+        if (entry.isIntersecting) {
+            //ajouter "active-section" à la section visible
+            sections.forEach( section => {
+                section.classList.remove("visible" ) ;
+                if ( section.id === entry.target.id ) {
+                    section.classList.add("visible" ) ;
+                }
+            })
+            
+            // récuperer l'item du nav dont la section est affiché :
+            links.forEach ( link => {
+                link.classList.remove("active-item") ;
+                if( link.getAttribute("href") === '#' + entry.target.id){
+                    link.classList.add("active-item") ;
+                }
+            }) ;
+        }
+    } ) ;
+},
+{
+    threshold: 0.5
+}) ;
+sections.forEach( section => observer.observe(section)) ;
 
-      // enlever active sur tous les liens
-      navLinks.forEach(l => l.classList.remove('active'));
+// Navbar Skills switching 
+const skillsLinks = document.querySelectorAll('.skills-link' ) ; 
+const Lists = document.querySelectorAll('.nav-item') ; 
+const blocks = document.querySelectorAll('.skills-panel') ; 
 
-      // ajouter active sur le lien cliqué
-      link.classList.add('active');
+skillsLinks.forEach ( link => {
+    link.addEventListener( 'click' , (e) => {
+        e.preventDefault () ;
 
-      const target = link.dataset.target;
+        skillsLinks.forEach ( lien => lien.classList.remove('active')) ; 
+        link.classList.add('active') ; 
+        const target = link.dataset.target ; 
 
-      // cacher tous les panels
-      panels.forEach(panel => {
-        panel.classList.remove('active');
-      });
+        Lists.forEach ( list => list.classList.remove("active")) ; 
+        link.parentElement.classList.add("active") ;
 
-      // afficher le panel ciblé
-      const panelToShow = document.querySelector('.' + target);
-      if (panelToShow) {
-        panelToShow.classList.add('active');
+        blocks.forEach ( block => {
+            block.classList.remove("active") ;
+        }) ;
+
+        const activeBlock = document.querySelector ('.'+target) ; 
+        if (activeBlock) {
+            activeBlock.classList.add('active') ;
+        }
+    }); 
+}) ; 
+
+  const steps = document.querySelectorAll('.process-card');
+
+  const observe = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.remove('show') ;
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
       }
     });
+  }, {
+    threshold: 0.3
   });
 
-const sections = document.querySelectorAll("div[id]");
-const navLink = document.querySelectorAll(".nav-link");
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLink.forEach(link => {
-          link.classList.remove("active-section");
-          if (link.getAttribute("href") === "#" + entry.target.id) {
-            link.classList.add("active-section");
-          }
-        });
-      }
-    });
-  },
-  {
-    threshold: 1 // Trigger when the entire section is in view
-
-    
-  }
-);
-sections.forEach(section => observer.observe(section));
+  steps.forEach(step => observe.observe(step));
