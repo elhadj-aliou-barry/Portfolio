@@ -1,0 +1,939 @@
+<?php
+    include_once("Form-contact-config/contact.php");
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elhadj Aliou Barry</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/responsive-design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Devicon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body style="background-color: #E9F1F7;">
+<!--Navbar-->
+<header>
+    <nav class="navbar pt-2 fixed-top">
+        <div class="container-fluid d-flex justify-content-between px-1 gap-0">
+            <span class="navbar-brand text-center text-wrap d-flex align-items-center justify-content-center">Barry Elhadj Aliou</span>
+
+            <ul class="nav ps-2 d-none d-sm-flex justify-content-center nav-pills">
+                <li class="nav-item"><a class="nav-link text-decoration-none" href="#home">Acceuil</a></li>
+                <li class="nav-item"><a class="nav-link text-decoration-none" href="#about">A propos de moi</a></li>
+                <li class="nav-item"><a class="nav-link text-decoration-none" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link text-decoration-none" href="#insertion">Insertion &amp; Projets</a></li>
+                <li class="nav-item"><a class="nav-link text-decoration-none" href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="Elhadj-Aliou-Barry-Resume.pdf" download class="text-decoration-none d-none d-lg-flex">
+                <div class="call-me col-5 d-flex justify-content-around me-0 text-center gap-3">
+                    <div class="col-9 text-center text-nowrap fs-sm-4 fs-xl-6">Télécharger mon CV</div>
+                    <div class="col-3"><i class="fa-solid fa-download fs-sm-4 fs-xl-6"></i></div>
+                </div>
+            </a>
+            <!-- Offcanvas for small screens -->
+            <button class="navbar-toggler d-block d-sm-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color: var(--dark-blue);"></span>
+            </button>
+            <!-- header of the offcanvas -->
+            <div class="offcanvas offcanvas-end d-sm-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color: #E9F1F7;">
+                <div class="offcanvas-header px-2 d-flex justify-content-center">
+                    <h5 class="offcanvas-title navbar-brand fs-6" id="offcanvasNavbarLabel">Elhadj Aliou Barry</h5>
+                    <button type="button" class="btn-close fs-6 me-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- Offcanvas body with navigation links -->
+                <div class="offcanvas-body" style="font-family: Averia Serif Libre;">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item mt-2"><a class="nav-links px-3" href="#home">Acceuil</a></li>
+                        <li class="nav-item mt-2"><a class="nav-links px-3" href="#about">A propos de moi</a></li>
+                        <li class="nav-item mt-2"><a class="nav-links px-3" href="#skills">Skills</a></li>
+                        <li class="nav-item mt-2"><a class="nav-links px-3" href="#insertion">Insertion &amp; Projets</a></li>
+                        <li class="nav-item mt-2"><a class="nav-links px-3" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Section Home -->
+<section id="home" class="d-flex lg-align-items-center">
+    <div class="container pt-sm-1 justify-content-center h-auto">
+        <div class="row my-container justify-content-between position-relative gap-lg-5 mx-xxl-5">
+
+            <div class="col-7 d-none d-sm-block col-sm pt-xl-5">
+                <div class="bloc_me col-12 d-none d-sm-block text-center p-2">
+                    <h1 id="Iam">Hey, je suis <span class="fst-italic fw-bold fs-md-6" style="color: var(--dark-blue);">Elhadj Aliou Barry</span></h1>
+                    <h3 id="dev" class="fw-normal">Etudiant en Informatique, et passionné par le développement web et le software engineering</h3>
+                </div>
+
+                <div class="row mt-5 mt-xxl-4 g-3 g-xl-5 mb-xxl-5 justify-content-around d-none d-sm-flex">
+                    <div class="col-3 col-sm-2 inclinee un mx-5 d-none d-sm-block" style="background-image: url(images/portfolio_screenshot.png); background-repeat: no-repeat; background-size: cover;"></div>
+                    <div class="col-3 inclinee deux ms-5 d-none d-sm-block" style="background-image: url(images/image-portfolio.png); background-repeat: no-repeat; background-size: cover;"></div>
+                </div>
+
+                <div class="icone un col-1 position-absolute d-none d-sm-block">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <i class="devicon-github-plain colored" style="font-size: 3.3rem;"></i>
+                    </div>
+                </div>
+
+                <div class="icone deux col-1 position-absolute d-none d-sm-block" style="background-color: #E9F1F7;">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <i class="devicon-linux-plain colored" style="font-size: 3.3rem;"></i>
+                    </div>
+                </div>
+
+                <div class="col my-5 mx-1 g-4 d-flex justify-content-center w-100 gap-sm-3 g-xxl-5 py-xxl-1">
+                    <a href="#contact" class="col-5 text-decoration-none text-center px-0">
+                        <div class="contact-work px-0 fs-6 text-nowrap" style="background-color: rgb(224, 61, 2);">M'envoyer un message</div>
+                    </a>
+                    <a href="https://github.com/elhadj-aliou-barry" target="_blank" class="col-6 text-decoration-none text-center px-0">
+                        <div class="contact-work px-0 fs-6 text-nowrap" style="background-color: black;">
+                            Voir mes réalisations
+                            <span class="ms-4 align-text-top"><i class="devicon-github-plain" style="font-size: 2.3rem;"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col col-xxl-5 position-relative text-center d-sm-none d-lg-block pt-xl-4 ps-xxl-5">
+                <img id="ma-photo" src="images/ma_photo.jpeg" alt="ma photo" class="rounded-5">
+
+                <div class="col d-sm-block d-lg-none d-md-none position-absolute bottom-0" style="width: 95%; max-width: 100%; background: rgba(247, 240, 240, 0.1); backdrop-filter: blur(10px); border-radius: 0 0 20px 20px; padding: 8px 8px;">
+                    <h1 id="Iam" class="fs-4 m-0">
+                        Hey, je suis
+                        <span class="fst-italic fw-bold fs-1" style="color: var(--dark-blue);">Elhadj Aliou Barry</span>
+                    </h1>
+                    <h4 class="fw-normal" style="font-size: 1rem;">Etudiant en Informatique et passionné par le développement web et le software engineering</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Contact and CV downloader buttons for small screens -->
+<div class="container d-block mt-3 d-sm-none">
+    <div class="row justify-content-center" style="max-width: 700px; margin-inline: auto;">
+        <a href="#contact" class="col-4 text-decoration-none text-center px-1">
+            <div class="contact-work px-1" style="background-color: rgb(224, 61, 2); font-size: 0.85rem;">
+                Me contacter
+            </div>
+        </a>
+        <a href="https://github.com/elhadj-aliou-barry" class="col-7 text-decoration-none text-center px-1 d-flex align-items-center justify-content-center gap-1">
+            <div class="contact-work text-nowrap" style="background-color: black; font-size: 0.9rem;">
+                Voir mes réalisations
+                <i class="devicon-github-plain ms-1" style="font-size: 1rem;"></i>
+            </div>
+        </a>
+    </div>
+    <div class="row">
+        <a href="Elhadj-Aliou-Barry-Resume.pdf" download class="text-decoration-none d-flex justify-content-center my-3 d-xxl-none">
+            <div class="call-me col-5 d-flex justify-content-around me-0 text-center gap-3" style="max-width: max-content;">
+                <div class="col-9 text-center text-nowrap fs-sm-4 fs-xl-6">Télécharger mon CV</div>
+                <div class="col-3"><i class="fa-solid fa-download fs-sm-4 fs-xl-6"></i></div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <a href="Elhadj-Aliou-Barry-Resume.pdf" download class="text-decoration-none d-none d-sm-flex justify-content-center mb-3 d-lg-none">
+        <div class="call-me col-5 d-flex justify-content-around me-0 text-center gap-3" style="max-width: max-content;">
+            <div class="col-9 text-center text-nowrap fs-sm-4 fs-xl-6">Télécharger mon CV</div>
+            <div class="col-3"><i class="fa-solid fa-download fs-sm-4 fs-xl-6"></i></div>
+        </div>
+    </a>
+</div>
+
+<hr class="d-flex justify-content-center my-2 mx-auto" style="width: 95%;">
+<!--Section About me-->
+<section id="about" class="align-items-center">
+    <div class="row justify-content-center mt-5 d-sm-none">
+        <div class="section col-1 mt-2 text-center fw-semibold" style="background-color: black;">
+            A propos de moi !
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4 mt-lg-1 pt-lg-5 align-self-top">
+        <div class="col-auto d-flex justify-content-between gap-5">
+            <div class="icon-box">
+                <i class="fa-solid fa-left-long fa-translate left fa-2xl" style="color: var(--dark-blue);"></i>
+            </div>
+            <div class="icon-box">
+                <i class="fa-solid fa-right-long fa-translate right fa-2xl" style="color: var(--dark-blue);"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg m-0 my-lg-0 m-lg-auto position-relative rounded-0">
+        <div class="bg-custom-blue g-0 p-0 g-sm-4 rounded-0">
+            <div class="scroll-container h-auto py-lg-5">
+
+                <!-- Card 1: Passion pour la lecture -->
+                <div class="scroll-card">
+                    <div class="row align-items-center">
+                        <div class="col-8 text-center m-2 p-2">Passion pour la lecture</div>
+                        <div class="col-2"><span class="emoji-icon">📚</span></div>
+                    </div>
+                    <div class="row text-center p-2 fw-normal" style="height: 55%;">
+                        J'apprécie particulièrement les romans philosophiques et les récits qui explorent la condition humaine.
+                        Parmi mes auteurs favoris figurent Albert Camus, Dostoïevski et Franz Kafka.
+                    </div>
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-2 ms-4"><span class="emoji-icon">📖</span></div>
+                        <div class="col-8 text-center m-2 p-2">Se retrouver dans la lecture !</div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Curiosité & Enthousiasme -->
+                <div class="scroll-card">
+                    <div class="row align-items-center">
+                        <div class="col-8 text-center m-1 p-1 py-2 mb-2">Curiosité & Enthousiasme</div>
+                        <div class="col-2"><span class="emoji-icon">💡</span></div>
+                    </div>
+                    <div class="row text-center p-2 fw-normal" style="height: 55%;">
+                        Curieux et passionné par la technologie, j'explore continuellement de nouveaux langages, frameworks et outils.
+                        Je m'intéresse particulièrement aux solutions qui optimisent l'efficacité et les méthodes de travail.
+                    </div>
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-2 ms-4"><span class="emoji-icon">🚀</span></div>
+                        <div class="col-8 text-center m-2 p-2">Toujours curieux et motivé !</div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Collaboration & ouverture -->
+                <div class="scroll-card">
+                    <div class="row align-items-center">
+                        <div class="col-8 text-center m-2 p-2">Collaboration & ouverture</div>
+                        <div class="col-2"><span class="emoji-icon">👥</span></div>
+                    </div>
+                    <div class="row text-center p-2 fw-normal" style="height: 55%;">
+                        J'aime travailler en équipe, en particulier avec des personnes de différents horizons.
+                        Travailler avec des profils variés me permet d'apprendre de nouvelles perspectives et méthodes de travail.
+                    </div>
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-2 ms-4"><span class="emoji-icon">🌐</span></div>
+                        <div class="col-8 text-center m-2 p-2">Explorer, apprendre, créer !</div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Design & Créativité -->
+                <div class="scroll-card">
+                    <div class="row align-items-center">
+                        <div class="col-8 text-center m-2 p-2">Design & <br>Créativité</div>
+                        <div class="col-2"><span class="emoji-icon">🎨</span></div>
+                    </div>
+                    <div class="row text-center p-2 fw-normal" style="height: 55%;">
+                        En parallèle du développement web et du software engineering, je m'intéresse au design graphique et à la conception d'interfaces.
+                        J'utilise des outils comme Figma pour créer des maquettes et des prototypes.
+                    </div>
+                    <div class="row align-items-center justify-content-between py-3">
+                        <div class="col-2 ms-4"><span class="emoji-icon">🖥️</span></div>
+                        <div class="col-8 text-center mx-2">Imaginer, s'inspirer et créer !</div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Sport & équilibre personnel -->
+                <div class="scroll-card">
+                    <div class="row align-items-center">
+                        <div class="col-8 text-center m-2 p-2">Sport & équilibre personnel</div>
+                        <div class="col-2"><span class="emoji-icon">🧘</span></div>
+                    </div>
+                    <div class="row text-center p-2 fw-normal" style="height: 55%;">
+                        Pendant mon temps libre, je pratique la gymnastique et la course à pied.
+                        Ces activités me permettent de prendre du recul et de maintenir un équilibre entre effort physique et concentration mentale.
+                    </div>
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-2 ms-4"><span class="emoji-icon">🏃</span></div>
+                        <div class="col-8 text-center m-2 p-2">Se mouvoir pour plus d'équilibre !</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row-gy-3 p-3 m-lg-4 my-lg-0 text-start fs-3">
+                Apprendre, créer et collaborer avec curiosité et équilibre.
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="d-flex justify-content-center my-2 mx-auto" style="width: 95%;">
+
+<!--Section Skills-->
+<section id="skills" class="d-flex align-items-center" style="min-height: 85vh;">
+    <div class="container-fluid justify-content-center " >
+        <!--Navigation bar -->
+        <nav class="navbar m-2 d-none d-md-block" style="z-index: 10;">
+            <div class="container-fluid justify-content-center">
+                <ul class="nav w-75 skills ps-2 justify-content-around nav-pills d-none d-md-flex" style="height: 40px; min-width: 540px; max-width: 550px;">
+                    <li class="nav-item active"><a class="skills-link active" href="" data-target="Technical">Compétences Techniques</a></li>
+                    <li class="nav-item"><a class="skills-link" href="" data-target="soft_skills">Soft Skills</a></li>
+                    <li class="nav-item"><a class="skills-link" href="" data-target="Tools">Outils & Environements</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="skills-wrapper">
+            <!--Technical skills -->
+            <div class="Technical skills-panel active row d-flex justify-content-center position-relative">
+                <div class="container-fluid w-100 sticky-top fs-2 pt-2 d-sm-none d-flex justify-content-center" style="top: 50px; background-color: #E9F1F7; height: 60px; margin: 0 -20px;">
+                    <span class="px-3" style="background-color: black; color: white; font-size: 1.2rem; border-radius: 40px; display: inline-block; height: 45px; line-height: 45px;">Compétences Techniques</span>
+                </div>
+
+                <div class="cat my-2 mb-md-0">
+                    <div class="row mt-2 d-flex justify-content-center align-items-center gap-3">
+                        <div class="col-5 p-0 fs-4 fw-bolder">Front-end</div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-htmx-plain" style="font-size: 3.3rem;"></i>
+                        </div>
+                    </div>
+                    <div class="col p-2">
+                        Capacité à concevoir des sites web allant du site vitrine aux sites web interactives et animées, intégrant des transitions fluides, des animations basées sur les keyframes et un design entièrement responsive.
+                    </div>
+                    <div class="row m-2 justify-content-center">
+                        <div class="col-10 p-2 m-2 d-none rounded-2 realisation">
+                            <img src="portfolio_screenshot.png" alt="Image d'une partie du portfolio">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="d-sm-none my-0" style="width: 80%;">
+
+                <div class="cat my-2 mb-md-0">
+                    <div class="row m-2 d-flex justify-content-center align-items-center gap-3">
+                        <div class="col-5 p-0 fs-4 fw-bolder">Back-end</div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-azuresqldatabase-plain" style="font-size: 3.3rem;"></i>
+                        </div>
+                    </div>
+                    <div class="col p-2" style="font-size: 0.85rem;">
+                        Conception et gestion de bases de données relationnelles, et développement de sites web dynamiques exploitant des données structurées. Maîtrise solide du SQL et des mécanismes de traitement et d'affichage des données jusqu'à l'interface utilisateur
+                    </div>
+                    <div class="row m-2 justify-content-center">
+                        <div class="col-10 p-2 m-2 d-none rounded-2 realisation">
+                            <img src="Schema_EventHub.png" alt="Schema Base de données">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="d-sm-none my-0" style="width: 80%;">
+
+                <div class="cat my-2 mb-md-0">
+                    <div class="row m-2 p-2 d-flex justify-content-center align-items-center gap-3">
+                        <div class="col-7 p-0 fw-bolder" style="font-size: 1.2rem;">Versioning & Collaboration</div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-githubactions-plain" style="font-size: 3.3rem;"></i>
+                        </div>
+                    </div>
+                    <div class="col p-2">
+                        Gestion du versioning de projets en local et en ligne, avec une forte capacité à collaborer au sein d'une équipe tout en assurant le suivi, le contrôle et la traçabilité des modifications apportées au code.
+                    </div>
+                    <div class="row m-2 justify-content-center">
+                        <div class="col-10 p-2 m-1 d-none rounded-2 realisation">
+                            <img src="github-dashB.png" alt="Tableau de bord github">
+                        </div>
+                    </div>
+                </div>
+                <div class="cat my-2 mb-md-0 ">
+                    <div class="row my-2 d-flex justify-content-center align-items-center">
+                        <div class="col-7 text-center fw-bolder " style="font-size:1.5rem;">Debbuguage</div>
+                        <div class="col-2"><img class="logo-club" src ="data:image/png;base64,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" alt=""></div>
+                    </div>
+                    <div class="col p-2" style="font-size: 0.85rem;">
+                        Capacité à diagnostiquer, analyser et corriger des dysfonctionnements côté front-end et back-end, en identifiant efficacement les erreurs de logique,
+                        de structure ou de rendu dans des environnements HTML, CSS, JavaScript et PHP
+                    </div>
+                    <div class="row m-2 justify-content-center">
+                        <div class="col-10 p-2 m-2 d-none rounded-2 realisation"><img src="devtools.png" alt="Outils de Debbuguage"></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="d-flex justify-content-center my-2 mx-auto d-block d-md-none" style="width: 95%;">
+            <!-- softs skills affichage from xs to md -->
+            <div class="container-fluid my-2 d-block d-md-none ">
+                <div class="col sticky-top fs-2 pt-2 d-md-none d-flex justify-content-center breakpoint" style="top: 50px; background-color: #E9F1F7; height: 60px ;  margin: 0 -30px; z-index: 3;"><span class="px-3  " style="background-color:black ; color: white; font-size: 1.2rem; border-radius: 40px; display: inline-block; height: 45px; line-height: 45px; ">Soft Skills</span></div>
+                <div class="row my-2  gap-sm-1 justify-content-around ">
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Communication</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Travail en équipe</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Coordination d'équipe</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Planification et Organisation</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Gestion efficace de temps</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Créativité et Innovation</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Esprit critique</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Résolution de problèmes</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Adaptabilité</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Autonomie</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Curiosité et autoformation</div>
+                    <div class="col-sm-3 col-5 soft my-1 lh-base d-flex align-items-center justify-content-center">Optimisation de travail</div>
+                </div>
+            </div>
+            <!-- Soft skills from md to end -->
+            <div class="container soft_skills skills-panel d-none d-md-block" style="max-width: 960px !important;">
+                <div class="row mt-4 justify-content-around gap-3 gap-lg-5">
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center fs-xxl-1">Communication</div>
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center fs-xxl-1">Travail en équipe</div>
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center fs-xxl-1">Coordination d'équipe</div>
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center fs-xxl-1">Planification et Organisation</div>
+                </div>
+
+                <div class="row mt-4 justify-content-around gap-3 gap-lg-5">
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center">Gestion efficace de temps</div>
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center">Créativité et Innovation</div>
+                    <div class="col soft border d-flex align-items-center justify-content-center">Esprit critique</div>
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center">Résolution de problèmes</div>
+                </div>
+
+                <div class="row mt-4 justify-content-around gap-3 gap-lg-5">
+                    <div class="col soft border d-flex align-items-center justify-content-center">Adaptabilité</div>
+                    <div class="col soft border d-flex align-items-center justify-content-center">Autonomie</div>
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center">Curiosité et autoformation</div>
+                    <div class="col soft border lh-base d-flex align-items-center justify-content-center">Optimisation de travail</div>
+                </div>
+            </div>
+
+            <!--Outils affichage xs to md screen -->
+            <hr class="d-flex justify-content-center my-2 mx-auto d-block d-md-none" style="width: 95%;">
+            <div class="container-fluid m-0 position-relative rounded-0 d-block d-md-none " >
+                <div class="container-fluid w-100  fs-2 pt-2 d-sm-none  d-flex flex-column justify-content-center align-items-center row-gap-0" style="top: 53px; background-color: #E9F1F7; height: 130px ; "><span class="px-3  " style="background-color:black ; color: white; font-size: 1.2rem; border-radius: 40px; display: inline-block; height: 45px; line-height: 45px; ">Outils & Environements</span>
+                    <div class="row justify-content-center mt-4 align-self-top ">
+                        <div class="col-auto d-flex gap-5">
+                            <div class="icon-box"><i class="fa-solid fa-left-long fa-translate left fa-xl" style="color: var(--dark-blue);"></i></div>
+                            <div class="icon-box"><i class="fa-solid fa-right-long fa-translate right fa-xl "style="color: var(--dark-blue);" ></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-custom-blue g-0 p-0 g-sm-4 rounded-0 ">
+                    <div class="scroll-container  sm-md ">
+                        <!-- Langages de programmation -->
+                        <div class="cat">
+                            <div class="col text-center m-2 p-2 fs-2 text-wrap">Langage de programmation</div>
+                            <div class="row justify-content-center text-center d-flex gap-1">
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-html5-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3   mb-4 tool-icon"><i class="devicon-css3-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3 mb-4 tool-icon"><i class="devicon-php-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3   mb-4 tool-icon"><i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3 mb-4 tool-icon"><i class="devicon-bootstrap-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3 mb-4 tool-icon"><i class="devicon-react-original colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-c-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-cplusplus-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-python-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-powershell-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-3 mb-4 tool-icon"><i class="devicon-git-plain colored" style="font-size: 3rem;"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="cat pb-5 ">
+                            <div class="col text-center m-2 mb-3 p-2  fs-2 text-wrap">Outils bureautiques <br>& de Collaboration</div>
+                            <div class="row g-4 justify-content-center gap-2">
+                                <div class="col-3 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg/250px-Microsoft_Office_Word_%282025%E2%80%93present%29.svg.png" alt="Word"></div></div>
+                                <div class="col-3 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"></div></div>
+                                <div class="col-3 text-center"><div class="tool-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf52hDyyPs-hW7OMO2HMvyczGIY2Dy2Ova-A&s" alt="PowerPoint"></div></div>
+                                <div class="col-3 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma"></div></div>
+                                <div class="col-3  text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/he/5/56/Canva-logo.png" alt="Canva"></div></div>
+                                <div class="col-3 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Google_Docs_Editors_logo.png" alt="Google workspaces"></div></div>
+                                <div class="col-3 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1200px-Notion-logo.svg.png" alt="Notion"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- Environnements de developpeur -->
+                        <div class="cat">
+                            <div class="col text-center m-2 p-2  fs-2 text-wrap">Outils et Environements</div>
+                            <div class="row justify-content-center text-center d-flex gap-1 row-gap-3">
+                                <div class="col-3 mb-4 tool-icon"><i class="devicon-vscode-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-powershell-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-github-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-3 mb-4 tool-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAx6camOf_G96Zcs2Zj34Yjmy0ysPd-p0oJQ&s" alt="linux"></div>
+                                <div class="col-3 mb-4 tool-icon"><i class="devicon-windows11-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-3  mb-4 tool-icon"><i class="devicon-phpstorm-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-3  tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/PhpMyAdmin_logo.svg/1200px-PhpMyAdmin_logo.svg.png" alt="PhpMyAdmin_logo"></div>
+                                <div class="col-3  mb-4 tool-icon"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/78/XAMPP_logo.svg/1183px-XAMPP_logo.svg.png" alt="Xampp Logo"></div>
+                                <div class="col-3 mb-4 tool-icon"><img src="https://pbs.twimg.com/profile_images/762579160099385344/w5MfsnMn_400x400.jpg" alt="chrome-devtools Logo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outils et environnement md-xxl  -->
+            <div class="container-fluid Tools skills-panel gx-1 mt-2 d-none d-md-block" >
+                <div class="row  justify-content-center mx-0 gap-2 ">
+                    <!-- Langages de programmation -->
+                    <div class="col-auto p-1">
+                        <div class="cat">
+                            <div class="col text-center my-2 p-2 fs-6 fs-lg-5 ">Langage de programmation </div>
+                            <div class="row justify-content-center text-center">
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-html5-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-css3-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-php-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-bootstrap-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-react-original colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-c-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-cplusplus-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-python-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-powershell-plain colored" style="font-size: 3rem;"></i></div>
+                                <div class="col-6 col-md-4 my-2 tool-icon"><i class="devicon-git-plain colored" style="font-size: 3rem;"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outils bureautiques -->
+                    <div class="col-auto p-1">
+                        <div class="cat  ">
+                            <div class="col text-center m-2 mb-3 p-2 fs-6 fs-lg-5 ">Outils bureautiques <br>& de Collaboration</div>
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-6 col-md-4 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Microsoft_Office_Word_%282025%E2%80%93present%29.svg/250px-Microsoft_Office_Word_%282025%E2%80%93present%29.svg.png" alt="Word"></div></div>
+                                <div class="col-6 col-md-4 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Microsoft_Office_Excel_%282025%E2%80%93present%29.svg" alt="Excel"></div></div>
+                                <div class="col-6 col-md-4 text-center"><div class="tool-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf52hDyyPs-hW7OMO2HMvyczGIY2Dy2Ova-A&s" alt="PowerPoint"></div></div>
+                                <div class="col-6 col-md-4 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma"></div></div>
+                                <div class="col-6 col-md-4 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/he/5/56/Canva-logo.png" alt="Canva"></div></div>
+                                <div class="col-6 col-md-4 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Google_Docs_Editors_logo.png" alt="Google workspaces"></div></div>
+                                <div class="col-6 col-md-4 text-center"><div class="tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1200px-Notion-logo.svg.png" alt="Notion"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Environnements de developpeur -->
+                    <div class="col-auto p-1">
+                        <div class="cat">
+                            <div class="col text-center m-2 p-2 fs-6 fs-lg-5">Outils et Environements de Développement</div>
+                            <div class="row justify-content-center text-center">
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><i class="devicon-vscode-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><i class="devicon-powershell-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><i class="devicon-github-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAx6camOf_G96Zcs2Zj34Yjmy0ysPd-p0oJQ&s" alt="linux"></div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><i class="devicon-windows11-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><i class="devicon-phpstorm-plain colored" style="font-size: 3.3rem;"></i></div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/PhpMyAdmin_logo.svg/1200px-PhpMyAdmin_logo.svg.png" alt="PhpMyAdmin_logo"></div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/78/XAMPP_logo.svg/1183px-XAMPP_logo.svg.png" alt="Xampp Logo"></div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-4 tool-icon"><img src="https://pbs.twimg.com/profile_images/762579160099385344/w5MfsnMn_400x400.jpg" alt="chrome-devtools Logo"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-5 pt-4 d-none d-lg-block">
+                <div class="row position-relative process-row justify-content-center">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center"><div class="process-card step" style="max-width: 180px ;"><h5>De l'Idée au design</h5></div></div>
+                    <div class="col-md-4 d-flex justify-content-center"><div class="process-card step"><h5>Du Design à la Conception</h5></div></div>
+                    <div class="col-md-4 d-flex justify-content-center"><div class="process-card step"><h5>De la Conception au produit final</h5></div></div>
+                </div>
+            </div>
+</section>
+
+<hr class="d-flex justify-content-center m-auto mt-4 " style="width: 95%;">
+
+<!--Section Projects & Social Insertion -->
+<section id="insertion" class="d-grid">
+    <!--Insertion Sociale-->
+    <div class="container-fluid mb-2 position-relative px-0 d-flex flex-column align-items-center justify-content-center">
+        <div class="container-fluid sticky-top fs-2 pt-2 d-sm-none d-flex justify-content-center" style="top: 50px; background-color: #E9F1F7; height: 60px; margin: 0 -30px; z-index: 2;">
+            <span class="px-3" style="background-color: black; color: white; font-size: 1.2rem; border-radius: 40px; display: inline-block; height: 45px; line-height: 45px;">Insertion Sociale</span>
+        </div>
+
+        <div class="row row-club mt-4 justify-content-center gap-lg-3 gap-xl-4 gap-xxl-5">
+            <!-- Club 1: Epik Leaders -->
+            <div class="col-1 club my-2 text-center h-auto">
+                <div class="row my-2">
+                    <div class="col-7 text-center m-2 p-2 fw-bold fs-2" style="font-size: 1.2rem;">Epik Leaders</div>
+                    <div class="col-2"><img class="logo-club" src="images/epikleaders-logo.png" alt="Epik Leaders Logo"></div>
+                </div>
+                <div class="col-auto my-3 text-center fs-6 fw-semibold poste">Vice Président Evenementiel <br>Responsable du département événementiel</div>
+                <div class="col-auto py-2 fw-normal poste-desc">
+                    Responsable de la coordination d'une équipe de quatres personnes et de différents département du club, et chargé à l'organisation des événements du club, impliquant la planification et la mise en œuvre d'activités comme des journées d'ouvertures, d'acceuil des membres, et de conférences scientifiques.
+                </div>
+            </div>
+
+            <hr class="d-md-none my-0" style="width: 80%;">
+
+            <!-- Club 2: UEI-FST -->
+            <div class="col-1 club my-2 px-2 text-center">
+                <div class="row my-2">
+                    <div class="col-7 text-center m-2 p-2 fw-bold fs-2" style="font-size: 1.2rem;">UEI-FST</div>
+                    <div class="col-2"><img class="logo-club" src="images/UEI-logo.png" alt="UEI Logo"></div>
+                </div>
+                <div class="col my-3 text-center fs-6 fw-semibold poste">Chargé des affaires sociales de l'UEI-Union des Etudiants Internationaux</div>
+                <div class="col-auto py-2 fw-normal poste-desc">
+                    Chargé de faciliter l'intégration sociale et culturelle des étudiants étrangers de la FST. Participation à l'organisation et à la coordination d'événements d'accueil et d'intégration, de journées culturelles, ainsi qu'à l'accompagnement et au soutien des nouveaux arrivants dans leurs processsus d'adaptation et d'intégration universitaire et sociale.
+                </div>
+            </div>
+
+            <hr class="d-md-none my-0" style="width: 80%;">
+
+            <!-- Club 3: Aseguim-Fès -->
+            <div class="col-1 club my-2 px-2 text-center">
+                <div class="row my-2">
+                    <div class="col-7 text-center m-2 p-2 fw-bold fs-2" style="font-size: 1.2rem;">Aseguim-Fès</div>
+                    <div class="col-2"><img class="logo-club" src="images/aseguim-logo.png" alt="Aseguim Logo"></div>
+                </div>
+                <div class="col my-3 fs-6 text-center poste fw-semibold">Président de la commission sociale et chargé à l'organisation de la commission Scientifique</div>
+                <div class="col-auto py-2 fw-normal poste-desc">
+                    Responsable de la coordination des actions sociales de la communauté, impliqué dans l'organisation d'activités d'intégration et d'événements culturels, ainsi que dans la planification d'initiatives scientifiques et académiques, notamment l'accueil des nouveaux arrivants et l'organisation de journées académiques et de formations scientifiques.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr class="d-flex justify-content-center m-auto" style="width: 95%;">
+
+<!--Section Projects & Realizations -->
+<section id="projects">
+    <div class="container-lg mt-lg-5 position-relative">
+        <div class="row justify-content-center">
+            <div class="section col-1 text-center mt-3 mt-lg-0" style="background-color: black;">
+                Projets et Réalisations
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-4 mt-lg-5 align-self-top">
+            <div class="col-auto d-flex gap-5">
+                <div class="icon-box">
+                    <i class="fa-solid fa-left-long fa-translate left fa-2xl" style="color: var(--dark-blue);"></i>
+                </div>
+                <div class="icon-box">
+                    <i class="fa-solid fa-right-long fa-translate right fa-2xl" style="color: var(--dark-blue);"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects scroll container -->
+        <div class="bg-custom-blue no-filter rounded-0 my-2">
+            <div class="scroll-container projects-scroll">
+
+                <!-- Project 1: Mini-Calculatrice-Web -->
+                <div class="scroll-card-project order-4 d-flex flex-column">
+                    <div class="col p-2 my-1 text-center fw-bolder" style="font-size: 1.5rem;">
+                        Mini-Calculatrice-Web
+                    </div>
+                    <div class="col justify-content-center d-flex flex-column my-1 gap-2">
+                        <div class="col-auto text-start fs-5 fw-medium">
+                            Statut: <span class="text-warning">En pause</span>
+                        </div>
+                        <div class="col-auto text-start fs-6 fw-semibold">
+                            Type: Projet personnel
+                        </div>
+                        <div class="col-auto desc-proj d-flex justify-content-center align-items-center text-center fw-normal" style="font-size: 0.95rem;">
+                            Développement d'une calculatrice basique gérant les priorités des opérations et les parenthèses, avec des algorithmes de calcul conçus et implémentés personnellement.
+                        </div>
+                    </div>
+
+                    <!-- Tech stack -->
+                    <div class="row justify-content-around m-3 gap-2">
+                        <div class="col-3 p-0">
+                            <i class="devicon-html5-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-3 p-0">
+                            <i class="devicon-css3-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-3 p-0">
+                            <i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Project links -->
+                    <div class="row justify-content-between m-1 d-flex gap-2 my-auto pb-2">
+                        <a href="" class="col-5 text-decoration-none text-nowrap px-1 button">
+                            Voir le projet
+                        </a>
+                        <a href="" class="col-6 text-decoration-none px-0 d-flex justify-content-around align-items-center gh-button rounded-5 px-2 button text-nowrap" style="color: white;">
+                            Voir le code
+                            <span class="p-1 pe-0 pt-0">
+                  <i class="devicon-github-plain align-middle" style="font-size: 1.5rem;"></i>
+                </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Portfolio -->
+                <div class="scroll-card-project order-2 d-flex flex-column">
+                    <div class="col p-2 my-1 text-center fw-bolder" style="font-size: 1.5rem;">
+                        Portfolio
+                    </div>
+                    <div class="col justify-content-center d-flex flex-column my-1 gap-2">
+                        <div class="col-auto text-start fs-5">
+                            Statut: <span class="text-success">Terminé</span>
+                        </div>
+                        <div class="col-auto text-start fs-6 fw-semibold">
+                            Type: Projet personnel
+                        </div>
+                        <div class="col-auto desc-proj justify-content-center align-items-center text-center fw-normal" style="font-size: 0.95rem;">
+                            Création d'une <b>première version de mon Portfolio</b> présentant mes passions, projets et compétences, avec navigation responsive et design personnalisé.
+                        </div>
+                    </div>
+
+                    <!-- Tech stack -->
+                    <div class="row justify-content-around my-3 mx-1 gap-1">
+                        <div class="col-2 p-0">
+                            <i class="devicon-html5-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-css3-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-bootstrap-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-php-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Project links -->
+                    <div class="row justify-content-center m-1 d-flex gap-2 my-auto pb-2">
+                        <a href="https://github.com/elhadj-aliou-barry/Portfolio.git" class="col-6 text-decoration-none px-0 d-flex justify-content-around align-items-center gh-button rounded-5 px-2 button text-nowrap" style="color: white;">
+                            Voir le code
+                            <span class="p-1 pe-0 pt-0">
+                  <i class="devicon-github-plain align-middle" style="font-size: 1.5rem;"></i>
+                </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: EventHub -->
+                <div class="scroll-card-project order-0 d-flex flex-column">
+                    <div class="col p-2 my-1 text-center fw-bolder" style="font-size: 1.5rem;">
+                        EventHub
+                    </div>
+                    <div class="col justify-content-center d-flex flex-column my-1 gap-2">
+                        <div class="col-auto text-start fs-5 fw-medium">
+                            Statut: <span class="text-success">Terminé</span>
+                        </div>
+                        <div class="col-auto text-start fs-6 fw-semibold">
+                            Type: Projet académique
+                        </div>
+                        <div class="col-auto desc-proj justify-content-center align-items-center text-center fw-normal" style="font-size: 0.86rem;">
+                            Implémentation d'un système de gestion d'événements (concerts, conférences, cinémas à configurations multiples) avec réservation, paiements, annulations et statistiques de ventes en temps réel.
+                        </div>
+                    </div>
+
+                    <!-- Tech stack -->
+                    <div class="row justify-content-around m-3 gap-2">
+                        <div class="col-3 p-0">
+                            <i class="devicon-azuresqldatabase-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-3 p-0">
+                            <i class="devicon-mysql-plain ps-2 colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-3 p-0 tool-icon">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTVuOd4xl3USZfuW6CuR_QcponvkzVb10k-g&s" alt="Xampp Logo" style="height: 3rem;">
+                        </div>
+                    </div>
+
+                    <!-- Project links -->
+                    <div class="row justify-content-center m-1 d-flex gap-2 my-auto pb-2">
+                        <a href="https://github.com/elhadj-aliou-barry/EventHub.git" class="col-6 text-decoration-none px-0 d-flex justify-content-around align-items-center gh-button rounded-5 px-2 button text-nowrap" style="color: white;">
+                            Voir le code
+                            <span class="p-1 pe-0 pt-0">
+                  <i class="devicon-github-plain align-middle" style="font-size: 1.5rem;"></i>
+                </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Visit UK -->
+                <div class="scroll-card-project order-3 d-flex flex-column">
+                    <div class="col p-2 my-1 text-center fw-bolder" style="font-size: 1.5rem;">
+                        Visit UK
+                    </div>
+                    <div class="col justify-content-center d-flex flex-column my-1 gap-2">
+                        <div class="col-auto text-start fs-5">
+                            Statut: <span class="text-success">Terminé</span>
+                        </div>
+                        <div class="col-auto text-start fs-6 fw-semibold">
+                            Type: Projet académique
+                        </div>
+                        <div class="col-auto desc-proj d-flex justify-content-center align-items-center text-center fw-normal" style="font-size: 0.85rem;">
+                            Développement d'un site web dynamique selon un design imposé, présentant le Royaume-Uni, avec authentification administrateur et gestion d'une newsletter pour lecture et envoi des articles par mail.
+                        </div>
+                    </div>
+
+                    <!-- Tech stack -->
+                    <div class="row justify-content-around mt-2 mx-1 gap-1">
+                        <div class="col-2 p-0">
+                            <i class="devicon-html5-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-css3-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-javascript-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-php-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-mysql-plain colored" style="font-size: 3rem;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Project links -->
+                    <div class="row justify-content-center mt-3 d-flex gap-2 my-auto pb-2">
+                        <a href="https://github.com/elhadj-aliou-barry/Projet_dev_web.git" class="col-6 text-decoration-none px-0 d-flex justify-content-around align-items-center gh-button rounded-5 px-2 button text-nowrap" style="color: white;">
+                            Voir le code
+                            <span class="p-1 pe-0 pt-0">
+                  <i class="devicon-github-plain align-middle" style="font-size: 1.5rem;"></i>
+                </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Cron-automation -->
+                <div class="scroll-card-project order-1 d-flex flex-column">
+                    <div class="col p-2 my-1 text-center fw-bolder" style="font-size: 1.5rem;">
+                        Cron-automation
+                    </div>
+                    <div class="col justify-content-center d-flex flex-column my-1 gap-2">
+                        <div class="col-auto text-start fs-5">
+                            Statut: <span class="text-warning">En cours</span>
+                        </div>
+                        <div class="col-auto text-start fs-6 fw-semibold">
+                            Type: Projet personnel
+                        </div>
+                        <div class="col-auto desc-proj justify-content-center align-items-center text-center fw-normal" style="font-size: 0.88rem;">
+                            <b>Script Shell automatisé avec Cron:</b> il supprime les captures d'écran non ouvertes et des fichiers inactifs depuis un certain nombre de jours, enregistre le nombre de fichiers supprimés et envoie une notification après chaque exécution.
+                        </div>
+                    </div>
+
+                    <!-- Tech stack -->
+                    <div class="row d-flex justify-content-around mt-2 mx-1 gap-1">
+                        <div class="col-2 p-0">
+                            <i class="devicon-powershell-plain colored" style="font-size: 3.6rem;"></i>
+                        </div>
+                        <div class="col-2 p-0">
+                            <i class="devicon-linux-plain colored" style="font-size: 3.6rem;"></i>
+                        </div>
+                        <div class="col-2 p-0 tool-icon">
+                            <img src="https://www.cyberphoton.com/wp-content/uploads/2017/03/Linux-Shell-Scripting-29-crontab-and-at-jobs.png" alt="Cron Logo" style="height: 3.6rem;">
+                        </div>
+                    </div>
+
+                    <!-- Project links -->
+                    <div class="row justify-content-center m-1 d-flex gap-2 my-auto pb-2">
+                        <a href="https://github.com/elhadj-aliou-barry/Cron-Automation.git" class="col-6 text-decoration-none px-0 d-flex justify-content-around align-items-center gh-button rounded-5 px-2 button text-nowrap" style="color: white; width: auto;">
+                            Voir le script
+                            <span class="p-2 pe-0 pt-0">
+                  <i class="devicon-github-plain align-middle" style="font-size: 1.5rem;"></i>
+                </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="d-flex justify-content-center m-auto" style="width: 95%;">
+
+<!--Prise de contact-->
+<section id="contact" class="d-flex align-items-center justify-content-center" style="min-height: 90vh;">
+    <div class="container-xxl m-2 m-lg-5 h-100 contain">
+        <div class="row justify-content-center gap-5">
+            <!-- Contact Information -->
+            <div class="col-auto col-md-5 d-flex flex-column justify-content-center text-start row-gap-3 position-relative">
+                <h1 id="GIT" class="ms-md-5">Get In Touch !</h1>
+                <h1 id="let_start" class="text-start-lg align-self-center align-self-start-sm">Let's start something together !</h1>
+
+                <div class="col-auto name d-none d-lg-block h-lg-auto align-self-start">Elhadj Aliou Barry</div>
+                <div class="col-auto d-none d-lg-block align-self-start" style="color: var(--dark-blue); font-weight: bolder;">
+                    Maroc-Fès, Mt Fleuri-Avenue Beyrouth
+                </div>
+
+                <div class="icone icon-contact col-1 position-absolute rounded-3 d-none d-lg-block" style="top: 250px; left: 75%; transform: rotate(25deg);">
+                    <span class="emoji-icon">👨‍💻</span>
+                </div>
+
+                <!-- Social Links -->
+                <div id="contact_icone" class="col-auto my-3 px-2 d-flex justify-content-start-lg w-100">
+                    <a id="logo_github" class="logo_contact" href="https://github.com/elhadj-aliou-barry">
+                        <i class="fa-brands fa-github fa-xl fa-md-2xl"></i>
+                    </a>
+                    <a id="logo_mail" class="logo_contact" href="mailto:elhadjaliou.barry@usmba.ac.ma">
+                        <i class="fa-regular fa-envelope fa-xl fa-md-2xl"></i>
+                    </a>
+                    <a id="logo_whatsapp" class="logo_contact" href="https://wa.me/224624227101">
+                        <i class="fa-brands fa-whatsapp fa-xl fa-md-2xl"></i>
+                    </a>
+                    <a id="logo_IG" class="logo_contact" href="https://www.linkedin.com/in/elhadj-aliou-barry-ab28263a6/">
+                        <i class="fa-brands fa-linkedin fa-xl fa-md-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-auto col-md-6 col-lg-6 d-flex justify-content-center">
+                <form class="glass-card ms-md-4 mt-2" method="post" action="index.php#contact">
+                    <h2>Contactez-moi !</h2>
+
+                    <?php
+                    // Feedback for the visitor
+                    if ($errConn) : ?>
+                        <div class="col-auto text-center m-2 mb-5 p-2" style="border-left: solid 8px #e43d3d; background-color: #E9F1F7 ; box-shadow: 0 4px 12px rgba(0,0,0,0.1) ;">
+                            Veuillez utiliser les supports de contact (mail ou WhatsApp) pour une réponse plus rapide.
+                        </div>
+                    <?php
+                    elseif ($success) : ?>
+                        <div class="col-auto text-center m-2 mb-5 p-2" style="border-left: solid 8px #52f052; background-color: #E9F1F7 ;box-shadow: 0 4px 12px rgba(0,0,0,0.1) ;">
+                            Merci de m’avoir contacté, je vous récontacterai sur le support de contact que vous avez donné (<?= htmlspecialchars($_POST["suppContact"]) ?>)
+                        </div>
+                    	<script>
+                            if (window.history.replaceState) {
+                                window.history.replaceState(null, null, window.location.href.split('#')[0] + "#contact");
+                            }
+                    	</script>
+                    <?php
+                    elseif (!$success && $_POST["submit"]) : ?>
+                        <div class="col-auto text-center m-2 mb-5 p-2" style="border-left: solid 8px #ec6c2b; background-color: #E9F1F7 ; box-shadow: 0 4px 12px rgba(0,0,0,0.1) ;">
+                            Désolé, votre essai de prise de contact a rencontré un souci. <br>
+                            Utilisez les supports de contact-ci (mail, WhatsApp).
+                        </div>
+                    <?php
+                    endif;
+                    ?>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6 form-floating">
+                            <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
+                            <label for="nom">&nbsp;Votre nom</label>
+                        </div>
+                        <div class="col-md-6 form-floating">
+                            <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required>
+                            <label for="prenom">&nbsp;Votre prénom</label>
+                        </div>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="email" name="suppContact" placeholder="Email / N° tel" required>
+                        <label for="email">Support de contact "email/N° tel"</label>
+                    </div>
+
+                    <div class="form-floating mb-4">
+                        <textarea class="form-control" placeholder="Message" name="message" id="message" required style="height: 120px; line-height: 25px;"></textarea>
+                        <label for="message">Entrez ici votre message</label>
+                    </div>
+
+                    <button type="submit" name="submit" class="btn btn-modern w-100 text-white">Envoyer moi le message</button>
+                    
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<hr class=" w-75 w-lg-100 m-auto mb-3">
+<h6 class="text-center pb-4  ps-4 contain align-self-bottom"> © 2026 Elhadj Aliou Barry. Tous droits réservés.</h6>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JavaScript/index.js"></script>
+</body>
+</html>

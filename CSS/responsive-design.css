@@ -1,0 +1,150 @@
+@media (min-width: 320px) and (max-width:575px) {
+    html{ scroll-snap-type: none !important;}
+    section{ min-height: 400px !important;}
+    .container-fluid {max-width: none !important;}
+    .club {width: clamp(310px,80vw,360px) ; }
+    .desc-proj {font-size: 0.93rem ; }
+    .scroll-card-project {min-width: 300px !important ; height: 380px ;}
+    /* zone responsive de la section de prise de contact */
+    h1#GIT {font-size: 2.7rem ; animation: none ;}
+    h1#let_start {font-size: 1.8em;}
+}
+@media (min-width:450px) {
+    .club {width: 80% ;}
+}
+@media (min-width: 576px ) {
+    section { min-height: 0 !important;}
+    .navbar-brand { width:16% ; font-size: 0.8rem; height: 40px ; padding: 3px ;}
+    .nav-pills li.nav-item a{ font-size: 0.70rem ;}
+    .contact-me-sm {justify-content: space-between; gap: 10%;}
+    .inclinee{width: 150px ; height: 100px ;}
+    .bloc_me h1 {font-size: 2rem;}
+    .bloc_me h3 {font-size: 1.3rem;}
+    .icone.un { left: -15px  ; top: 120px;}
+    .icone.deux {left: 95% ; top: 280px ; }
+    div.bloc_me {height: 120px;}
+    /* zone responsive  de la section about-me */
+    section#about .container {max-width: none !important ; }
+    /*zone responsive de la section skills */
+    .Technical {gap:20px ; }
+    /* zone responsive de la section de prise de contact */
+    h1#GIT {font-size: 2.8rem ;}
+    h1#let_start {font-size: 2em;}
+}
+@media (min-width: 670px ) {
+    .navbar-brand { width:22% ; font-size: 1.1rem; height: 40px ; padding: 3px ;}
+    .nav-pills li.nav-item a{ font-size: 0.80rem ;}
+    .inclinee{width: 190px ; height: 130px ;}
+    .icone.deux {left: 98% ; top: 280px ; }
+}
+@media (min-width: 768px ) {
+    .navbar-brand { width:25% ; font-size: 1.2rem; height: 40px ; padding: 3px ;}
+    .nav-pills li.nav-item a{ font-size: 0.9rem ;}
+    .bloc_me h1 {font-size: 2.3rem;}
+    .bloc_me h3 {font-size: 1.5rem;}
+    .inclinee{width: 210px ; height: 150px ;}
+    /*zone responsive de la section skills */
+    .Technical {gap:1.5rem ; row-gap: 0.2rem;}
+    .Technical .cat { min-width:370px ;}
+    .container-fluid.Tools div.cat {  max-width: 230px !important; height: 320px;}
+    /*zone responsive de la section insertion */
+    .club {width: 90%px ;}
+    /* zone responsive de la section de prise de contact */   
+    h1#GIT {font-size: 3.2rem ;}
+    h1#let_start {font-size: 2.4rem;}
+
+
+}
+@media (min-width: 850px ) {
+    .container-fluid.Tools div.cat {  max-width: 250px !important; height: 320px;}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-brand { width:18% ; font-size: 1.35rem; height: 40px ; padding: 3px ;}
+    .nav-pills li.nav-item a{ font-size: 0.92rem ;}
+    .nav-pills {gap:0.2rem ; }
+    .call-me{ font-size: 1.2rem;}
+    .inclinee{width: 150px ; height: 100px ;}
+    .icone.deux { left: 450px !important; top: 160px;}
+    div.bloc_me {height: 130px;}
+    .bloc_me h1 {font-size: 1.8rem;}
+    h3#dev {font-size: 1.2rem;}
+    #ma-photo{height: 400px ; width: 400px !important ; border-radius: 50% !important; object-position: center 10%;}
+    .my-container{ gap: 5% ; }
+    /* zone responsive  de la section about-me */
+    section#about .container {max-width: none !important ; }
+    .scroll-card {max-width: 300px;}
+    .scroll-card .col-8 {font-size: 1.1rem;}
+    .scroll-card .row{font-size: 1rem;}
+    /*zone responsive de la section skills */
+    .Technical {gap:0.8rem ; }
+    .Technical .cat { min-width:410px;}
+    .container-fluid.Tools div.cat {  max-width: 280px !important; height: 320px;}
+    /*zone responsive de la section insertion */
+    .club {width: 320px ;}
+    .club .row .col-7 { font-size: 1.4rem !important;}
+
+
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .navbar-brand { width:18% ; font-size: 1.5rem; height: 40px ; padding: 3px ;}
+    .nav-pills li.nav-item a{ font-size: 1.1rem ;}
+    .nav-pills {gap:0.4rem ; }
+    .call-me{ font-size: 1.2rem;}
+    .inclinee{width: 190px ; height: 120px ;}
+    .icone.deux { left: 450px !important; top: 210px;}
+    .icone.un { right: 450px !important; top: 210px;}
+    div.bloc_me {height: 140px;}
+    .bloc_me h1 {font-size: 1.8rem;}
+    h3#dev {font-size: 1.5rem;}
+    #ma-photo{height: 450px ; width: 450px !important ; border-radius: 50% !important; object-position: center 10%;}
+    .my-container{ gap: 7% ;}
+    /* zone responsive  de la section about-me */
+    .scroll-card {max-width: 300px;}
+    .scroll-card .col-8 {font-size: 1.1rem;}
+    .scroll-card .row{font-size: 1.1rem;}
+    /* zone responsive de la section skills */
+    ul.nav.skills {max-width: 600px !important;}
+    /*zone responsive de la section skills */
+    .Technical {gap:0.8rem ; }
+    .Technical .cat { min-width: 90px; max-width:280px !important;}
+    .container-fluid.Tools div.cat {  max-width: 280px !important; height: 320px;}
+    /*zone responsive de la section insertion */
+    .club {width: 350px ;}
+    .club .row .col-7 { font-size: 1.4rem !important;}
+
+
+}
+@media (min-width:1400px) {
+    .navbar-brand { width:18% ; font-size: 1.6rem; height: 40px ; padding: 3px ;}
+    .nav-pills li.nav-item a{ font-size: 1.2rem ;}
+    .nav-pills {gap:0.5rem ; }
+    .call-me{ font-size: 1.4rem;}
+    .inclinee{width: 250px ; height: 150px ;}
+    .icone.deux { left: 550px !important; top: 250px;}
+    .icone.un { right: 450px !important; top: 250px;}    div.bloc_me {height: 180px;}
+    .bloc_me h1 {font-size: 2.5rem;}
+    h3#dev {font-size: 1.9rem;}
+    #ma-photo{height: 550px ; object-position: center 10%; border-radius: 60px !important; align-self: center !important;}
+    .contact-work { font-size: 1.4rem !important;}
+    /* zone responsive  de la section about-me */
+    .scroll-card {max-width: 300px;}
+    .scroll-card .col-8 {font-size: 1.1rem;}
+    .scroll-card .row{font-size: 1.1rem;}
+    /* zone responsive de la section skills */
+    ul.nav.skills {max-width: 680px !important; gap:15px ; }
+    .Technical {gap:2rem ; }
+    .Technical .cat { min-width: 90px; max-width:280px !important;}
+    .container-fluid.Tools div.cat {  max-width: 280px !important; height: 320px;}
+    /*zone responsive de la section insertion */
+    .club {width: 370px ;}
+    .club .row .col-7 { font-size: 1.5rem !important;}
+
+}
+@media (min-width:1500px) {
+    .container {width: 100% !important ; }
+    .call-me{ font-size: 1.5rem; }
+}
+
+@media (max-height:900px) {
+    html {scroll-snap-type: none;}
+}
