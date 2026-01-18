@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries)=>{
     } ) ;
 },
 {
-    threshold: 0.5
+    threshold: 0.3
 }) ;
 sections.forEach( section => observer.observe(section)) ;
 
@@ -69,3 +69,30 @@ skillsLinks.forEach ( link => {
   });
 
   steps.forEach(step => observe.observe(step));
+
+const cats1 = document.querySelectorAll(".Technical .cat");
+  const cats2 = document.querySelectorAll(".row-club .club");
+  const cats = [...cats1, ...cats2];
+
+  const observerr = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = "none";
+          entry.target.offsetHeight;
+          entry.target.style.animation = "fadeUp 0.6s linear";
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  cats.forEach((cat) => observerr.observe(cat));
+
+  document.querySelectorAll("#offcanvasNavbar .nav-links").forEach((link) => {
+    link.addEventListener("click", () => {
+      const offcanvasEl = document.getElementById("offcanvasNavbar");
+      const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+      offcanvas.hide();
+    });
+  });
