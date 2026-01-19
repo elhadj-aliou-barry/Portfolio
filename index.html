@@ -1,7 +1,3 @@
-<?php
-    include_once("Form-contact-config/contact.php");
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -871,10 +867,10 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="col-auto col-md-6 col-lg-6 d-flex justify-content-center">
+            <div class="col-auto d-none col-md-6 col-lg-6 d-flex justify-content-center">
                 <form class="glass-card ms-md-4 mt-2" method="post" action="index.php#contact">
                     <h2>Contactez-moi !</h2>
-
+                   <!-- 
                     <?php
                     // Feedback for the visitor
                     if ($errConn) : ?>
@@ -900,7 +896,7 @@
                     <?php
                     endif;
                     ?>
-
+                    -->
                     <div class="row g-3 mb-3">
                         <div class="col-md-6 form-floating">
                             <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
